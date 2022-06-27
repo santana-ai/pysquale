@@ -1,5 +1,5 @@
 import unittest
-from src.words import ABBREVIATION_MAP
+from pysquale.words import ABBREVIATION_MAP
 
 class TestWords(unittest.TestCase):
     def test_abbreviation_map(self):

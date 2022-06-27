@@ -1,6 +1,6 @@
 import unittest
-from src.common.pipeline import MapperPipeline, ReducerPipeline
-from src.words.cleaning import remove_accentuation, remove_punctuation, to_lower
+from pysquale.common.pipeline import MapperPipeline, ReducerPipeline
+from pysquale.words.cleaning import remove_accentuation, remove_punctuation, to_lower
 
 class TestPipeline(unittest.TestCase):
     def test_reducer_pipeline(self):

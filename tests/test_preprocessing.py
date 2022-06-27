@@ -1,5 +1,5 @@
 import unittest
-from src.words.preprocessing import remove_stopwords, tokenize, detokenize, stem
+from pysquale.words.preprocessing import remove_stopwords, tokenize, detokenize, stem
 
 class TestPreprocessing(unittest.TestCase):
     def test_tokenize(self):

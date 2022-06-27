@@ -1,6 +1,6 @@
 from pydoc import text
 import unittest
-from src.words.cleaning import remove_accentuation, remove_email, remove_extra_spaces, remove_html, remove_numbers, remove_punctuation, to_lower
+from pysquale.words.cleaning import remove_accentuation, remove_email, remove_extra_spaces, remove_html, remove_numbers, remove_punctuation, to_lower
 
 class TestCleaning(unittest.TestCase):
     def test_remove_accentuation(self):
