@@ -48,18 +48,3 @@ class MapperPipeline(Pipeline):
         items:Iterable = self.items
         output = list(map(lambda item: func(item), items))
         return output
-
-
-
-# class Pipeline:
-#     def __init__(self, input:Any, function_list:List[Callable]):
-#         self.input = input
-#         self.function_list = function_list
-
-#     def run(self):
-#         new_text = reduce(
-#             lambda value, function: function(value),
-#             self.function_list,
-#             self.input,
-#         )
-#         return new_text
