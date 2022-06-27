@@ -1,15 +1,8 @@
 from pydoc import text
 import unittest
-from src.words.cleaning import remove_accentuation, remove_email, remove_extra_spaces, remove_html, remove_numbers, remove_punctuation, remove_stopwords, to_lower
+from src.words.cleaning import remove_accentuation, remove_email, remove_extra_spaces, remove_html, remove_numbers, remove_punctuation, to_lower
 
 class TestCleaning(unittest.TestCase):
-    def test_remove_stopwords(self):
-        text = "Oiiii galerinha. Os professores da minha escola gostam de jogar bola com os alunos."
-        additinonal_words = ["Oiiii"]
-        real_output = remove_stopwords(text, additinonal_words)
-        expected_output = "galerinha. professores escola gostam jogar bola alunos."
-        self.assertEqual(real_output, expected_output, "Should be equal")
-
     def test_remove_accentuation(self):
         text = "É isso aí, irmão! Pensou que seria fácil?"
         real_output = remove_accentuation(text)
