@@ -1,6 +1,6 @@
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
-
+from pysquale import __version__
 # To use a consistent encoding
 from codecs import open
 from os import path
@@ -14,7 +14,7 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="pysquale",
-    version="0.0.3",
+    version="0.0.11",
     author="Henrique Santana",
     author_email="santana@cloudhumans.com",
     description="Useful lib for text processing in Portuguese",
@@ -33,8 +33,11 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    packages=["pysquale"],
+    packages=find_packages(include=['pysquale', 'pysquale.*']),
     include_package_data=True,
+    package_data={
+        'pysquale': ['words/files/*.txt']
+    },
     python_requires=">=3.6",
     install_requires=[
         'nltk>=3.7',
